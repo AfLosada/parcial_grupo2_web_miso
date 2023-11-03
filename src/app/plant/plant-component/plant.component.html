@@ -1,0 +1,23 @@
+<div class="col-8">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col"><span class="title">First</span></th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let plant of plants">
+          <th class="text-shadow" scope="row">{{ plant.id }}</th>
+          <td class="text-shadow">{{ plant.nombre_comun }}</td>
+          <td class="text-shadow">{{ plant.tipo }}</td>
+          <td class="text-shadow">{{ plant.clima }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <span>Total plantas de interior: {{ getInteriorPlants().length }}</span>
+  <br/>
+  <span>Total plantas de exterior: {{ getExteriorPlants().length }}</span>
